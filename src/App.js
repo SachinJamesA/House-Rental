@@ -5,7 +5,6 @@ import {
   Route
 } from "react-router-dom";
 import Navbar from './myComponents/Navbar';
-// import Cards from './myComponents/Cards';
 import Home from './myComponents/Home';
 import Footer from './myComponents/Footer';
 import About from './myComponents/About';

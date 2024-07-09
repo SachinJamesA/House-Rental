@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
                     <ul>
                         <h3 className='text-[#E93740] mb-3 font-bold text-lg'>Navigation</h3>
                         <li>
-                            <a className='font-normal text-sm' href="/">about us</a>
+                            <Link className='font-normal text-sm' href="/about">about us</Link>
                         </li>
                         <li>
                             <a className='font-normal text-sm' href="/">Blog</a>

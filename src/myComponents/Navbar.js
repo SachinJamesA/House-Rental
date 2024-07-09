@@ -9,10 +9,13 @@ export default function Navbar() {
     const [activeLink, setActiveLink] = useState("");
 
     const [active, setActive] = useState('navbar')
-    const showBar = ()=>{
+
+    const showBar = (event)=>{
+        event.preventDefault();
         setActive('navbar activeNavbar')
     }
-    const closeBar = ()=>{
+    const closeBar = (event)=>{
+        event.preventDefault();
         setActive('navbar')
     }
 
@@ -41,10 +44,10 @@ export default function Navbar() {
                 </li>
                 <div className="btn flex justify-center items-center mt-4 lg:mt-0">
                     <li className='navItem list-none'>
-                        <Link to="/signup" className={`navLink text-xl font-medium  hover:cursor-pointer flex items-center text-red-600 hover:text-white py-2 px-7 rounded-full hover:bg-red-600 whitespace-nowrap ${activeLink === "Sign in" ? "bg-red-600 text-white" : "text-black"}`} onClick={() => setActiveLink("Sign in")}><GoPerson className='mr-2' />Sign up</Link>
+                        <Link to="/signup" className={`navLink text-xl font-medium  hover:cursor-pointer flex items-center text-red-600 hover:text-white py-1 px-3 rounded-full hover:bg-red-600 whitespace-nowrap ${activeLink === "Sign in" ? "bg-red-600 text-white" : "text-black"}`} onClick={() => setActiveLink("Sign in")}><GoPerson className='mr-2' />Sign up</Link>
                     </li>
                     <li className='navItem list-none'>
-                        <Link to="/Login" className={`navLink text-xl font-medium  hover:cursor-pointer flex items-center text-red-600 hover:text-white py-2 px-7 ml-1 rounded-full hover:bg-red-600 whitespace-nowrap ${activeLink === "Login" ? "bg-red-600 text-white" : "text-black"}`} onClick={() => setActiveLink("Login")}><GoPerson className='mr-2' />Login</Link>
+                        <Link to="/Login" className={`navLink text-xl font-medium  hover:cursor-pointer flex items-center text-red-600 hover:text-white py-1 px-3 ml-1 rounded-full hover:bg-red-600 whitespace-nowrap ${activeLink === "Login" ? "bg-red-600 text-white" : "text-black"}`} onClick={() => setActiveLink("Login")}><GoPerson className='mr-2' />Login</Link>
                     </li>
                 </div>
                 <div className='absolute top-3 right-3 text-3xl cursor-pointer lg:hidden' onClick={closeBar}><IoCloseCircle /></div>
